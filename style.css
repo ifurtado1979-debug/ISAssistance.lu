@@ -12,7 +12,7 @@ background: transparent;
 padding:20px;
 border-radius:10px;
 }
-header { background:#0073e6; color:white; position:fixed; width:100%; top:0; left:0; z-index:1000; }
+header { background:transparent; color:white; position:fixed; width:100%; top:0; left:0; z-index:1000; }
 header .container { 
 display:flex;
 align-items:center;
@@ -25,7 +25,7 @@ margin-left:10px;
 }
 header h1 { margin:0; font-size:24px; }
 nav { display:flex; gap:10px; }
-.btn { text-decoration:none; color:white; padding:8px 15px; background:#004d99; border-radius:4px; }
+.btn { text-decoration:none; color:white; padding:8px 15px; background:transparent; border-radius:4px; }
 .btn:hover { background:#003366; }
 .btn-primary { background:#ff9900; color:white; }
 .btn-primary:hover { background:#cc7a00; }
