@@ -16,3 +16,7 @@ form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px s
 form button { padding:10px 20px; background:#0073e6; color:white; border:none; border-radius:4px; cursor:pointer; }
 form button:hover { background:#004d99; }
 footer { background:#004d99; color:white; text-align:center; padding:10px; margin-top:40px; }
+.logo{
+height:40px;
+margin-right:10px;
+}
