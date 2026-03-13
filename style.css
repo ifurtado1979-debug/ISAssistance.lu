@@ -69,3 +69,10 @@ text-align: center;
 color: white;
 padding: 10px;
 }
+
+.accueil{
+background-image:url("Fond-accueil.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
