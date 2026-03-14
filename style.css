@@ -84,8 +84,9 @@ background-attachment:fixed;
 }
 
 .contact{
-background-image:url("fond-contact.png");
-background-size:cover;
+background-image:url("fond-logo.png");
+background-size:contain;
+background-repeat: no-repeat;
 background-position:center;
 background-attachment:fixed;
 }
