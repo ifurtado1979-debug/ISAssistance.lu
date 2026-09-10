@@ -6,40 +6,72 @@
     <title>Mes services - ISAssistance Administrative</title>
 
     <style>
+        /* Fond de la page */
         body.services {
-    background-image: url("fond-services.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-}
-        .toggle-button {
-            display: inline-block;
-            background: transparent;
+            background-image: url("fond-services.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
-            border: 1px solid rgba(255,255,255,0.8);
-            padding: 10px 20px;
-            margin: 8px 0;
-            border-radius: 5px;
+        }
+
+        /* Zone centrale */
+        .services-container {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Les 3 grandes rubriques */
+        .main-button {
+            display: block;
+            width: 360px;
+            max-width: 90%;
+            margin: 25px auto;
+            padding: 15px 20px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 8px;
             font-family: Arial, sans-serif;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             cursor: pointer;
+            text-align: center;
         }
 
-        .toggle-button:hover {
-            background: #003366;
+        .main-button:hover {
+            background: #004d99;
         }
 
+        /* Sous-rubriques */
         .sub-button {
+            display: block;
+            width: 300px;
+            max-width: 85%;
+            margin: 10px auto;
+            padding: 10px 15px;
+            background: rgba(0, 51, 102, 0.85);
+            color: white;
+            border: 1px solid white;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
             font-size: 18px;
-            margin: 6px 0;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
         }
 
+        .sub-button:hover {
+            background: #004d99;
+        }
+
+        /* Contenu caché */
         .toggle-content {
             display: none;
             margin: 10px auto 25px;
+            text-align: center;
         }
 
         .toggle-content.open {
@@ -50,6 +82,7 @@
             list-style: none;
             padding: 0;
             margin: 10px auto;
+            text-align: center;
         }
 
         .toggle-content li {
@@ -57,6 +90,21 @@
             font-size: 18px;
             font-weight: bold;
             line-height: 1.8;
+        }
+
+        .toggle-content p {
+            max-width: 750px;
+            margin: 10px auto 20px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Espace entre les grandes rubriques */
+        .main-section {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -78,161 +126,166 @@
 
 <main>
 
-    <section class="hero">
+    <section class="hero services-container">
 
         <!-- MES SERVICES -->
-        <h2>
+        <div class="main-section">
+
             <button
                 type="button"
-                class="toggle-button"
+                class="main-button"
                 aria-expanded="false"
                 aria-controls="services-content"
                 onclick="toggleSection('services-content', this)">
                 Mes services
             </button>
-        </h2>
 
-        <div id="services-content" class="toggle-content">
+            <div id="services-content" class="toggle-content">
 
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="comptable-content"
-                onclick="toggleSection('comptable-content', this)">
-                Assistance comptable
-            </button>
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="comptable-content"
+                    onclick="toggleSection('comptable-content', this)">
+                    Assistance comptable
+                </button>
 
-            <div id="comptable-content" class="toggle-content">
-                <ul>
-                    <li>Tâches comptables quotidiennes</li>
-                    <li>Clôture mensuelle / trimestrielle / annuelle</li>
-                    <li>Reporting</li>
-                    <li>Et bien plus encore, selon vos besoins</li>
-                </ul>
+                <div id="comptable-content" class="toggle-content">
+                    <ul>
+                        <li>Tâches comptables quotidiennes</li>
+                        <li>Clôture mensuelle / trimestrielle / annuelle</li>
+                        <li>Reporting</li>
+                        <li>Et bien plus encore, selon vos besoins</li>
+                    </ul>
+                </div>
+
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="administrative-content"
+                    onclick="toggleSection('administrative-content', this)">
+                    Assistance administrative
+                </button>
+
+                <div id="administrative-content" class="toggle-content">
+                    <ul>
+                        <li>Tâches administratives quotidiennes</li>
+                        <li>Gestion de dossiers</li>
+                        <li>Gestion du personnel</li>
+                        <li>Et bien plus encore, selon vos besoins</li>
+                    </ul>
+                </div>
+
             </div>
-
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="administrative-content"
-                onclick="toggleSection('administrative-content', this)">
-                Assistance administrative
-            </button>
-
-            <div id="administrative-content" class="toggle-content">
-                <ul>
-                    <li>Tâches administratives quotidiennes</li>
-                    <li>Gestion de dossiers</li>
-                    <li>Gestion du personnel</li>
-                    <li>Et bien plus encore, selon vos besoins</li>
-                </ul>
-            </div>
-
         </div>
 
 
         <!-- POUR QUI -->
-        <h2>
+        <div class="main-section">
+
             <button
                 type="button"
-                class="toggle-button"
+                class="main-button"
                 aria-expanded="false"
                 aria-controls="pour-qui-content"
                 onclick="toggleSection('pour-qui-content', this)">
                 Pour qui ?
             </button>
-        </h2>
 
-        <div id="pour-qui-content" class="toggle-content">
+            <div id="pour-qui-content" class="toggle-content">
 
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="independants-content"
-                onclick="toggleSection('independants-content', this)">
-                Indépendants
-            </button>
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="independants-content"
+                    onclick="toggleSection('independants-content', this)">
+                    Indépendants
+                </button>
 
-            <div id="independants-content" class="toggle-content">
-                <p>
-                    Pour vous permettre de déléguer certaines tâches et de vous consacrer pleinement à votre activité.
-                </p>
+                <div id="independants-content" class="toggle-content">
+                    <p>
+                        Pour vous permettre de déléguer certaines tâches et de vous consacrer pleinement à votre activité.
+                    </p>
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="entreprises-content"
+                    onclick="toggleSection('entreprises-content', this)">
+                    Entreprises
+                </button>
+
+                <div id="entreprises-content" class="toggle-content">
+                    <p>
+                        Pour bénéficier d’un soutien administratif ou comptable flexible, ponctuel ou régulier, en fonction de vos besoins.
+                    </p>
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="fiduciaires-content"
+                    onclick="toggleSection('fiduciaires-content', this)">
+                    Fiduciaires
+                </button>
+
+                <div id="fiduciaires-content" class="toggle-content">
+                    <p>
+                        Pour disposer d’un renfort externe lorsque la charge de travail augmente ou lorsqu’un soutien administratif et comptable supplémentaire est nécessaire.
+                    </p>
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sub-button"
+                    aria-expanded="false"
+                    aria-controls="particuliers-content"
+                    onclick="toggleSection('particuliers-content', this)">
+                    Particuliers
+                </button>
+
+                <div id="particuliers-content" class="toggle-content">
+                    <p>
+                        Pour vous accompagner dans certaines tâches et démarches administratives du quotidien.
+                    </p>
+                </div>
+
             </div>
-
-
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="entreprises-content"
-                onclick="toggleSection('entreprises-content', this)">
-                Entreprises
-            </button>
-
-            <div id="entreprises-content" class="toggle-content">
-                <p>
-                    Pour bénéficier d’un soutien administratif ou comptable flexible, ponctuel ou régulier, en fonction de vos besoins.
-                </p>
-            </div>
-
-
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="fiduciaires-content"
-                onclick="toggleSection('fiduciaires-content', this)">
-                Fiduciaires
-            </button>
-
-            <div id="fiduciaires-content" class="toggle-content">
-                <p>
-                    Pour disposer d’un renfort externe lorsque la charge de travail augmente ou lorsqu’un soutien administratif et comptable supplémentaire est nécessaire.
-                </p>
-            </div>
-
-
-            <button
-                type="button"
-                class="toggle-button sub-button"
-                aria-expanded="false"
-                aria-controls="particuliers-content"
-                onclick="toggleSection('particuliers-content', this)">
-                Particuliers
-            </button>
-
-            <div id="particuliers-content" class="toggle-content">
-                <p>
-                    Pour vous accompagner dans certaines tâches et démarches administratives du quotidien.
-                </p>
-            </div>
-
         </div>
 
 
         <!-- LANGUES -->
-        <h2>
+        <div class="main-section">
+
             <button
                 type="button"
-                class="toggle-button"
+                class="main-button"
                 aria-expanded="false"
                 aria-controls="langues-content"
                 onclick="toggleSection('langues-content', this)">
                 Langues de communication
             </button>
-        </h2>
 
-        <div id="langues-content" class="toggle-content">
-            <ul>
-                <li>Luxembourgeois</li>
-                <li>Français</li>
-                <li>Allemand</li>
-                <li>Anglais</li>
-                <li>Portugais</li>
-            </ul>
+            <div id="langues-content" class="toggle-content">
+
+                <ul>
+                    <li>Luxembourgeois</li>
+                    <li>Français</li>
+                    <li>Allemand</li>
+                    <li>Anglais</li>
+                    <li>Portugais</li>
+                </ul>
+
+            </div>
         </div>
 
     </section>
